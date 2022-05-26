@@ -136,15 +136,17 @@ while continuar == True:
                     else:
                         print('Campo incorrecto.')
                 elif elem.find('tipo').text == 'Lista':
+                    found = False
                     print("Introduce el número del elemento a modificar: ")
                     numElem = input()
                     for sub in elem:
                         if sub.get('id') == numElem:
+                            found = True
                             print('Introduce el nuevo elemento: ')
                             newElem = input()
                             sub.text = newElem
-                        else:
-                            print('Elemento no encontrado.')
+                    if found == False:
+                        print('Elemento no encontrado.')
                 tree.write('notas.xml')
 
         if encontrado == False:
