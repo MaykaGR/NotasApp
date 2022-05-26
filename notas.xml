@@ -1,0 +1,66 @@
+<notas>
+	<nota id="1">
+		<id>1</id>
+		<tipo>Recordatorio</tipo>
+		<fecha>05/05/21</fecha>
+		<tema>Cita m&#233;dica</tema>
+	</nota>
+	<nota id="2">
+		<id>2</id>
+		<tipo>Manuscrita</tipo>
+		<imagen />
+		<comentario>Puesta de sol</comentario>
+	</nota>
+	
+	<nota id="3">
+		<id>3</id>
+		<tipo>Lista</tipo>
+		<elemento id="1">nata</elemento>
+		<elemento id="2">papel</elemento>
+		<elemento id="3">leche</elemento>
+		<elemento id="4">fruta</elemento>
+	</nota>
+	<nota id="4">
+		<id>4</id>
+		<tipo>Lista</tipo>
+		<elemento id="1">ir a correr</elemento>
+		<elemento id="2">ir al m&#233;dico</elemento>
+	</nota>
+<nota id="5">
+	<id>5</id><imagen />
+	<tipo>Manuscrita</tipo>
+	<comentario>Idea- crimen en el para&#237;so</comentario>
+</nota>
+<nota id="6">
+	<id>6</id>
+	<tipo>Recordatorio</tipo>
+	<fecha>03/07/22</fecha>
+	<tema>importante</tema>
+</nota>
+<nota id="7">
+	<id>7</id>
+	<tipo>Manuscrita</tipo>
+	<imagen>documents/image.png</imagen>
+	<tipo>foto de celebraci&#243;n</tipo>
+</nota>
+<nota id="8">
+	<id>8</id>
+	<tipo>Lista</tipo>
+	<elemento id="1">rojo</elemento>
+	<elemento id="2">verde</elemento>
+	<elemento id="3">azul</elemento>
+</nota>
+<nota id="9">
+	<id>9</id>
+	<tipo>Lista</tipo>
+	<elemento id="1">a</elemento>
+	<elemento id="2">b</elemento>
+	<elemento id="3">c</elemento>
+</nota>
+<nota id="10">
+	<id>10</id>
+	<tipo>Lista</tipo>
+	<elemento id="1">h</elemento>
+	<elemento id="2">i</elemento>
+</nota>
+</notas>
