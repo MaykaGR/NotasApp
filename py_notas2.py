@@ -103,53 +103,55 @@ while continuar == True:
             for subelem in elem:
                 print(subelem.text)
     elif accion == "3":
+        encontrado = False
         print('Introduce el id de la nota a modificar: ')
         idNota = input()
         for elem in root:
             if elem.get('id') == idNota:
                 encontrado = True
-                if elem.get('tipo') == 'Recordatorio':
+                if elem.find('tipo').text == 'Recordatorio':
                     print('Introduce campo a modificar (fecha o tema): ')
                     campo = input()
                     if campo == 'fecha':
                         print('Introduce nueva fecha: ')
                         nFecha = input()
-                        elem.get('fecha').text = nFecha
+                        elem.find('fecha').text = nFecha
                     elif campo == 'tema':
                         print('Introduce el nuevo tema: ')
                         nTema = input()
-                        elem.get('tema').text = nTema
+                        elem.find('tema').text = nTema
                     else:
                         print('Campo incorrecto.')
-                elif elem.get('tipo') == 'Manuscrita':
+                elif elem.find('tipo').text == 'Manuscrita':
                     print('Introduce campo a modificar (imagen o comentario): ')
                     campo = input()
                     if campo == 'imagen':
                         print('Introduce nueva imagen: ')
                         nImagen = input()
-                        elem.get('imagen').text = nImagen
+                        elem.find('imagen').text = nImagen
                     elif campo == 'comentario':
                         print('Introduce el nuevo comentario: ')
                         nComentario = input()
-                        elem.get('comentario').text = nComentario
+                        elem.find('comentario').text = nComentario
                     else:
                         print('Campo incorrecto.')
-                elif elem.get('tipo') == 'Lista':
+                elif elem.find('tipo').text == 'Lista':
                     print("Introduce el número del elemento a modificar: ")
                     numElem = input()
-                    for subelem in elem:
-                        if subelem.get('id') == numElem:
+                    for sub in elem:
+                        if sub.get('id') == numElem:
                             print('Introduce el nuevo elemento: ')
                             newElem = input()
-                            subelem.text = newElem
+                            sub.text = newElem
                         else:
                             print('Elemento no encontrado.')
-            else:
-                encontrado = False
+                tree.write('notas.xml')
+
         if encontrado == False:
             print('Id no encontrado.')
 
     elif accion == "4":
+        encontrado = False
         print('Introduce el id de la nota que deseas ver: ')
         nota = input()
         for elem in root:
@@ -157,12 +159,11 @@ while continuar == True:
                 encontrado = True
                 for subelem in elem: 
                     print(subelem.text)
-            else:
-                encontrado = False
         if encontrado == False:
             print('Id no encontrado.')
     else:
         continuar = False
 else: print('Hasta la próxima!')
+
 
 
